@@ -70,9 +70,9 @@ C:\Program Files\Microsoft";
             string numberString = "123";
             Console.WriteLine("Number string: " + numberString);
             Console.WriteLine("Type: " + numberString.GetType());
-            
+
             // May throw an exception if the string is not a number or is null
-            Console.WriteLine("Parse: " + int.Parse(numberString)); 
+            Console.WriteLine("Parse: " + int.Parse(numberString));
             Console.WriteLine("Convert.ToInt32: " + Convert.ToInt32(numberString));
 
             // Will not throw an exception if the string is not a number or is null
@@ -94,6 +94,9 @@ C:\Program Files\Microsoft";
             Console.WriteLine("Formatted (Fixed): " + number.ToString("f"));
             Console.WriteLine("Formatted (Hex): " + number.ToString("x"));
 
+            var sentence = "This is going to be a really really really really really long text.";
+            const int maxLength = 22;
+            Console.WriteLine(StringUtil.SummarizeText(sentence, maxLength));
         }
     }
 }
