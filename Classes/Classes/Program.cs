@@ -60,6 +60,7 @@ namespace Classes
             Console.WriteLine("Sum(1, 2, 3, 4, 5): \t\t\t" + Calculator.Sum(1, 2, 3, 4, 5));
             Calculator.Sum(new int[] { 1, 2, 3, 4, 5 }, out int result);
             Console.WriteLine("Sum([1, 2, 3, 4, 5], out int result): \t" + result);
+            Console.WriteLine("AreaOfCircle(5): \t\t\t" + Calculator.AreaOfCircle(5));
         }
     }
 }

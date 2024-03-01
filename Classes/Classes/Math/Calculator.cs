@@ -8,6 +8,8 @@ namespace Classes.Math
 {
     public class Calculator
     {
+        // Field initializer and readonly field
+        readonly static float PI = 3.14f;
         public static int Add(int a, int b)
         {
             return a + b;
@@ -40,6 +42,11 @@ namespace Classes.Math
             {
                 result += number;
             }
+        }
+
+        public static float AreaOfCircle(float radius)
+        {
+            return PI * radius * radius;
         }
     }
 }
