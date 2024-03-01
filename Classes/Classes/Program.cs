@@ -6,10 +6,12 @@ namespace Classes
     {
         static void Main(string[] args)
         {
+            // Create a new instance of the class
             Person niko = new Person();
             niko.Name = "Niko Bellic";
             niko.Introduce("Vlad");
 
+            // Object initializer. Creates a new instance of the class and sets the properties
             var roman = new Person()
             {
                 Name = "Roman Bellic"
@@ -23,6 +25,7 @@ namespace Classes
             Console.WriteLine($"Customer ID: {customer.Id}");
             Console.WriteLine($"Customer Name: {customer.Name}");
 
+            // Create a new instance of the class and set the properties using the constructor
             var customer2 = new Customer("Niko Bellic");
             Console.WriteLine($"Customer ID: {customer2.Id}");
             Console.WriteLine($"Customer Name: {customer2.Name}");
