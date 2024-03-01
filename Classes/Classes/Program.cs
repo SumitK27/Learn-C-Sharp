@@ -7,12 +7,17 @@ namespace Classes
         static void Main(string[] args)
         {
             Person niko = new Person();
-            niko.firstName = "Niko";
-            niko.lastName = "Bellic";
-            niko.Introduce();
+            niko.Name = "Niko Bellic";
+            niko.Introduce("Vlad");
 
-            var result = Calculator.Add(1, 2);
-            Console.WriteLine(result);
+            var roman = new Person()
+            {
+                Name = "Roman Bellic"
+            };
+            roman.Introduce("Niko");
+
+            var myName = Person.Parse("Niko Bellic");
+            myName.Introduce("Roman");
         }
     }
 }

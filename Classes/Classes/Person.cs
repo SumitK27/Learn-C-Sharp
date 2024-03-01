@@ -2,12 +2,19 @@
 {
     public class Person
     {
-        public string firstName;
-        public string lastName;
+        public string Name;
 
-        public void Introduce()
+        public void Introduce(string to)
         {
-            Console.WriteLine("My name is " + firstName + " " + lastName);
+            Console.WriteLine($"Hi {to}, I am {Name}");
+        }
+
+        public static Person Parse(string str)
+        {
+            var person = new Person();
+            person.Name = str;
+
+            return person;
         }
     }
 }
