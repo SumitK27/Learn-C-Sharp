@@ -2,7 +2,7 @@
 
 namespace Classes
 {
-    internal class Program
+    internal partial class Program
     {
         static void Main(string[] args)
         {
@@ -21,6 +21,7 @@ namespace Classes
             var myName = Person.Parse("Niko Bellic");
             myName.Introduce("Roman");
 
+            Console.WriteLine("--------------------------------------------");
             var customer = new Customer();
             Console.WriteLine($"Customer ID: {customer.Id}");
             Console.WriteLine($"Customer Name: {customer.Name}");
@@ -35,6 +36,30 @@ namespace Classes
             customer3.Orders.Add(order);
             Console.WriteLine($"Customer ID: {customer3.Id}");
             Console.WriteLine($"Customer Name: {customer3.Name}");
+
+            var pointA = new Point(10, 20);
+            pointA.Move(40, 60);
+            Console.WriteLine($"Point A: {pointA.X}, {pointA.Y}");
+
+            var pointB = new Point(10, 20);
+            pointB.Move(new Point(60, 30));
+            Console.WriteLine($"Point B: {pointB.X}, {pointB.Y}");
+
+            try
+            {
+                var pointC = new Point();
+                pointC.Move(null);
+            } catch (Exception)
+            {
+                Console.WriteLine("An unexpected error occured.");
+            }
+
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("Add(1, 2): \t\t\t\t" + Calculator.Add(1, 2));
+            Console.WriteLine("Add([1, 2, 3, 4, 5, 6]): \t\t" + Calculator.Add(new int[] { 1, 2, 3, 4, 5, 6 }));
+            Console.WriteLine("Sum(1, 2, 3, 4, 5): \t\t\t" + Calculator.Sum(1, 2, 3, 4, 5));
+            Calculator.Sum(new int[] { 1, 2, 3, 4, 5 }, out int result);
+            Console.WriteLine("Sum([1, 2, 3, 4, 5], out int result): \t" + result);
         }
     }
 }

@@ -12,5 +12,34 @@ namespace Classes.Math
         {
             return a + b;
         }
+
+        public static int Add(int[] numbers)
+        {
+            var sum = 0;
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+            return sum;
+        }
+
+        public static int Sum(params int[] numbers)
+        {
+            var sum = 0;
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+            return sum;
+        }
+
+        public static void Sum(int[] numbers, out int result)
+        {
+            result = 0;
+            foreach (var number in numbers)
+            {
+                result += number;
+            }
+        }
     }
 }
