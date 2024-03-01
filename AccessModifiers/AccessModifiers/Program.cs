@@ -4,11 +4,16 @@
     {
         static void Main(string[] args)
         {
-            var person = new Person();
+            var person = new Person("Male");
             person.SetName("Niko");
-            person.SetBirthdate(new DateTime(1990, 1, 1));
             Console.WriteLine($"Name: {person.GetName()}");
-            Console.WriteLine($"Birthdate: {person.GetBirthdate()}");
+
+            person.BirthDate = new DateTime(1990, 1, 1);
+            Console.WriteLine($"Birthdate: {person.BirthDate}");
+            Console.WriteLine($"Age: {person.Age}");
+
+            person.Place = "Liberty City";
+            Console.WriteLine($"Place: {person.Place}");
         }
     }
 }
