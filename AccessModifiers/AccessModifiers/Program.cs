@@ -1,4 +1,6 @@
-﻿namespace AccessModifiers
+﻿using Amazon;
+
+namespace AccessModifiers
 {
     internal class Program
     {
@@ -14,6 +16,10 @@
 
             person.Place = "Liberty City";
             Console.WriteLine($"Place: {person.Place}");
+
+            // Access Modifier Example
+            var customer = new Customer();
+            customer.Promote();
         }
     }
 }
