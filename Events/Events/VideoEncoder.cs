@@ -3,10 +3,14 @@
     public class VideoEncoder
     {
         // 1. Define a delegate
-        public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
+        //public delegate void VideoEncodedEventHandler(object source, VideoEventArgs args);
 
         // 2. Define an event based on that delegate
-        public event VideoEncodedEventHandler? VideoEncoded;
+        //public event VideoEncodedEventHandler? VideoEncoded;
+
+        // EventHandler - built-in delegate
+        public event EventHandler<VideoEventArgs>? VideoEncoded;
+        public event EventHandler? VideoEncodedNoData;
 
         public void Encode(Video video)
         {
